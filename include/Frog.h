@@ -1,6 +1,8 @@
 #ifndef Frog_h
 #define Frog_h
-
+/**
+ * @brief here we have the implementation of the attributes and the methods of the class Frog.
+ */
 #include <iostream>
 #include <string>
 #include <cstdlib>
@@ -48,5 +50,7 @@ void Frog::Frogc(int i){
 	id ="Frog" + convert.str();
 
 }
+
+void FrogRace(Frog Frog1,Frog Frog2,Frog Frog3);
 
 #endif
