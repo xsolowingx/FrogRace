@@ -1,6 +1,12 @@
+/**@file race.cpp
+ *@brief file where occurs the "race".
+ *@since 08/23/2017
+ *@date 08/24/2017
+ *@author Matheus de Jesus
+ */
 #include "../include/Frog.h"
 
-void FrogRace(Frog Frog1,Frog Frog2,Frog Frog3){
+void FrogRace(Frog& Frog1,Frog& Frog2,Frog& Frog3){
 
 
 	while((Frog1.getDistanceT() < Frog::distanceT_race) && 
@@ -27,7 +33,7 @@ void FrogRace(Frog Frog1,Frog Frog2,Frog Frog3){
 			break;
 		}
 	}
-	std::cout<<"The "<<Frog1.getId()<<" went through "<<Frog1.getDistanceT()<<"cm in "<<Frog1.getQuantity_jumps()<<" jumps"<<std::endl;
-	std::cout<<"The "<<Frog2.getId()<<" went through "<<Frog2.getDistanceT()<<"cm in "<<Frog2.getQuantity_jumps()<<" jumps"<<std::endl;
-	std::cout<<"The "<<Frog3.getId()<<" went through "<<Frog3.getDistanceT()<<"cm in "<<Frog3.getQuantity_jumps()<<" jumps"<<std::endl;
+	std::cout<<Frog1<<std::endl;
+	std::cout<<Frog2<<std::endl;
+	std::cout<<Frog3<<std::endl;
 }

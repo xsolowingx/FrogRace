@@ -1,13 +1,21 @@
 #ifndef Frog_h
 #define Frog_h
 /**
- * @brief here we have the implementation of the attributes and the methods of the class Frog.
+ * @brief here we have the class Frog.
+ * @details The class Frog has the int attribute for Distance Travelled"distanceT",
+ * the int attribute for Quantity of jumps that the Frog did(quantity_jumps),
+ * the string attribute for ID of the frog(id).
+ * Has the method that is necessary to the race occurs"jump()",
+ * and the constructor "Frogc(int i)" to instantiate the object and give him the id of "Frog"i"".
+ *         			
+ * e.g f1.Frogc(5), the object "f1" receive the id of "Frog5". 
  */
 #include <iostream>
 #include <string>
 #include <cstdlib>
 #include <ctime>
 #include <sstream>
+#include <ostream>
 
 class Frog{
 private:
@@ -21,36 +29,9 @@ public:
 	std::string getId();
 	void Frogc(int i);
 	void jump();
+	friend std::ostream& operator<< (std::ostream& o,Frog const f1);
 };
 
-
-
-int Frog::getQuantity_jumps(){
-	return quantity_jumps;
-}
-
-int Frog::getDistanceT(){
-	return distanceT;
-}
-
-std::string Frog::getId(){
-	return id;
-}
-
-void Frog::jump(){
-	distanceT += rand() % 30 +1;
-	quantity_jumps += 1;
-}
-
-void Frog::Frogc(int i){
-	std::ostringstream convert;
-	convert << i;
-	quantity_jumps = 0;
-	distanceT = 0;
-	id ="Frog" + convert.str();
-
-}
-
-void FrogRace(Frog Frog1,Frog Frog2,Frog Frog3);
+void FrogRace(Frog& Frog1,Frog& Frog2,Frog& Frog3);
 
 #endif

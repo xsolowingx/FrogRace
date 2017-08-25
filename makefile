@@ -12,7 +12,7 @@ SRC_DIR = ./src
 OBJ_DIR = ./build
 
 
-FrogRace:	$(OBJ_DIR)/main.o $(OBJ_DIR)/race.o
+FrogRace:	$(OBJ_DIR)/main.o $(OBJ_DIR)/race.o $(OBJ_DIR)/Frog.o
 	@echo "============="
 	@echo "Conecting the target $@"
 	@echo "========s====="
@@ -25,6 +25,9 @@ $(OBJ_DIR)/main.o:	$(SRC_DIR)/main.cpp $(INC_DIR)/Frog.h
 
 $(OBJ_DIR)/race.o:	$(SRC_DIR)/race.cpp $(INC_DIR)/Frog.h
 	$(CC) $(CFLAGS) -c $< -o $(OBJ_DIR)/race.o
+
+$(OBJ_DIR)/Frog.o:	$(SRC_DIR)/Frog.cpp $(INC_DIR)/Frog.h
+	$(CC) $(CFLAGS) -c $< -o $(OBJ_DIR)/Frog.o
 
 clean:	
 	rm -rf $(BIN_DIR)/*

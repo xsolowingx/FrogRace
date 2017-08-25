@@ -1,0 +1,10 @@
+To compile:
+Access the main paste of the game where has the file named "makefile" by the terminal
+and type "make" without "".
+
+To clean:
+Access the main paste of the game where has the file named "makefile" by the terminal
+and type "make clean" without "".
+
+To play:
+After compiling, access the bin directory, and execute the bin file "FrogRace".
