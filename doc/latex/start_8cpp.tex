@@ -1,0 +1,45 @@
+\hypertarget{start_8cpp}{}\section{/home/xsolowingx/\+L\+P1/\+Programas/\+Frog\+Race2/src/start.cpp File Reference}
+\label{start_8cpp}\index{/home/xsolowingx/\+L\+P1/\+Programas/\+Frog\+Race2/src/start.\+cpp@{/home/xsolowingx/\+L\+P1/\+Programas/\+Frog\+Race2/src/start.\+cpp}}
+
+
+file where asks the inputs to the user.  
+
+
+{\ttfamily \#include \char`\"{}../include/\+Frog.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{start_8cpp_aae8930f660b564f910382a286cfe2873}{start} (std\+::string \&option, std\+::string \&line, int \&quantity, int \&function\+\_\+return)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+file where asks the inputs to the user. 
+
+\begin{DoxySince}{Since}
+08/23/2017 
+\end{DoxySince}
+\begin{DoxyDate}{Date}
+08/28/2017 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Matheus de Jesus 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{start_8cpp_aae8930f660b564f910382a286cfe2873}\label{start_8cpp_aae8930f660b564f910382a286cfe2873}} 
+\index{start.\+cpp@{start.\+cpp}!start@{start}}
+\index{start@{start}!start.\+cpp@{start.\+cpp}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void start (\begin{DoxyParamCaption}\item[{std\+::string \&}]{option,  }\item[{std\+::string \&}]{line,  }\item[{int \&}]{quantity,  }\item[{int \&}]{function\+\_\+return }\end{DoxyParamCaption})}
+
+$<$Loop necessary to ensure that the program will only run if the user type \char`\"{}y\char`\"{} or will stop if he type \char`\"{}n\char`\"{}.
+
+$<$Loop necessary to ensure that the user will set the amount of frogs if he type \char`\"{}y\char`\"{} or will use the default valor (3) .
+
+$<$Repeat the reading of the line
+
+$<$Create a stringstream with the content of the \char`\"{}line\char`\"{}
+
+$<$ Try to extract a integer from the stringstream If he suceed to extract and has left nothing... Get out of the loop. 

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Frog Race: /home/xsolowingx/LP1/Programas/FrogRace2/src/Frog.cpp File Reference</title>
+<title>Frog Race: /home/xsolowingx/LP1/Programas/FrogRace2/src/start.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,42 +65,54 @@ $(function() {
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Frog.cpp File Reference</div>  </div>
+<div class="title">start.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>file where has the implementation of the methods of the class <a class="el" href="classFrog.html" title="here we have the class Frog. ">Frog</a>.  
+<p>file where asks the inputs to the user.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;../include/Frog.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4489b3da48764d843b98af6f06b7da5e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Frog_8cpp.html#a4489b3da48764d843b98af6f06b7da5e">operator&lt;&lt;</a> (std::ostream &amp;o, <a class="el" href="classFrog.html">Frog</a> const F1)</td></tr>
-<tr class="separator:a4489b3da48764d843b98af6f06b7da5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae8930f660b564f910382a286cfe2873"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="start_8cpp.html#aae8930f660b564f910382a286cfe2873">start</a> (std::string &amp;option, std::string &amp;line, int &amp;quantity, int &amp;function_return)</td></tr>
+<tr class="separator:aae8930f660b564f910382a286cfe2873"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>file where has the implementation of the methods of the class <a class="el" href="classFrog.html" title="here we have the class Frog. ">Frog</a>. </p>
-<dl class="section since"><dt>Since</dt><dd>08/24/2017 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>08/24/2017 </dd></dl>
+<div class="textblock"><p>file where asks the inputs to the user. </p>
+<dl class="section since"><dt>Since</dt><dd>08/23/2017 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>08/28/2017 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Matheus de Jesus </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a4489b3da48764d843b98af6f06b7da5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4489b3da48764d843b98af6f06b7da5e">&#9670;&nbsp;</a></span>operator<<()</h2>
+<a id="aae8930f660b564f910382a286cfe2873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae8930f660b564f910382a286cfe2873">&#9670;&nbsp;</a></span>start()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td class="memname">void start </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>o</em>, </td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>option</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classFrog.html">Frog</a> const&#160;</td>
-          <td class="paramname"><em>F1</em>&#160;</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>function_return</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -109,7 +121,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>&lt;Here we have the overload of the operator of extraction &lt;&lt;. </p>
+<p>&lt;Loop necessary to ensure that the program will only run if the user type "y" or will stop if he type "n".</p>
+<p>&lt;Loop necessary to ensure that the user will set the amount of frogs if he type "y" or will use the default valor (3) .</p>
+<p>&lt;Repeat the reading of the line</p>
+<p>&lt;Create a stringstream with the content of the "line"</p>
+<p>&lt; Try to extract a integer from the stringstream If he suceed to extract and has left nothing... Get out of the loop. </p>
 
 </div>
 </div>

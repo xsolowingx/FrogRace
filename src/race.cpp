@@ -1,39 +1,35 @@
 /**@file race.cpp
  *@brief file where occurs the "race".
  *@since 08/23/2017
- *@date 08/24/2017
+ *@date 08/28/2017
  *@author Matheus de Jesus
  */
 #include "../include/Frog.h"
 
-void FrogRace(Frog& Frog1,Frog& Frog2,Frog& Frog3){
+void FrogRace(Frog* Frog1,int const quantity){
+	int i;
 
+	for(i = 0;i < quantity;i++){
 
-	while((Frog1.getDistanceT() < Frog::distanceT_race) && 
-		(Frog2.getDistanceT() < Frog::distanceT_race) && 
-		(Frog3.getDistanceT() < Frog::distanceT_race) ){/*!<Verify if any of the 3 frogs has crossed the line.*/
-		Frog1.jump();
-
-		if(Frog1.getDistanceT() >= Frog::distanceT_race){/*!<Verify if Frog1 has crossed the line.*/
-			std::cout<<"The "<<Frog1.getId()<<" was the winner!!!"<<std::endl<<std::endl;
-			break;
-		}
-
-		Frog2.jump();
-
-		if(Frog2.getDistanceT() >= Frog::distanceT_race){/*!<Verify if Frog2 has crossed the line.*/
-			std::cout<<"The "<<Frog2.getId()<<" was the winner!!!"<<std::endl<<std::endl;
-			break;
-		}
-
-		Frog3.jump();
-
-		if(Frog3.getDistanceT() >= Frog::distanceT_race){/*!<Verify if Frog3 has crossed the line.*/
-			std::cout<<"The "<<Frog3.getId()<<" was the winner!!!"<<std::endl<<std::endl;
-			break;
-		}
+		Frog1[i].Frogc(i+1);/*!<Set the id of Frog1[i] to Frog"i+1" and set the quantity_jumps & distanceT to 0.*/		
 	}
-	std::cout<<Frog1<<std::endl;
-	std::cout<<Frog2<<std::endl;
-	std::cout<<Frog3<<std::endl;
+	
+	while(Frog1[i].getDistanceT() <= Frog::distanceT_race){/*!<Make the "race" occurs.*/
+
+		for(i = 0;i < quantity;i++){/*!<Make every frog jump.*/
+
+			Frog1[i].jump();
+
+			if(Frog1[i].getDistanceT() >= Frog::distanceT_race){
+
+				std::cout<<"The "<<Frog1[i].getId()<<" was the winner!!!"<<std::endl<<std::endl;
+				break;
+			}
+		}
+	}	
+	for(i = 0;i < quantity;i++){/*!<Show to the user how many cm  the Frog[i] went through  with "n" jumps.*/
+
+		std::cout<<Frog1[i]<<std::endl;
+	}
+
 }

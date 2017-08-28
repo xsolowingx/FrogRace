@@ -32,6 +32,8 @@ public:
 	friend std::ostream& operator<< (std::ostream& o,Frog const f1);
 };
 
-void FrogRace(Frog& Frog1,Frog& Frog2,Frog& Frog3);
+void FrogRace(Frog* Frog1,int const quantity);
+
+void start(std::string& option, std::string& line, int& quantity, int& function_return);
 
 #endif

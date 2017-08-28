@@ -2,7 +2,7 @@
  *@brief "main" file of the program.
  *@since 08/22/2017
  *@details The distance unit will be cm, with the max range of jump that a frog can jump, is 40cm;
- *@date 08/24/2017
+ *@date 08/28/2017
  *@author Matheus de Jesus
  */
 #include "../include/Frog.h"
@@ -13,28 +13,20 @@ int main(){
 	
 	srand (time(NULL));/*!<Function which ensures that rand() will generate a "true" random number every time.*/
 	
-	std::string option;
-	Frog Frog1,Frog2,Frog3;
-	
-	Frog1.Frogc(1);
-	Frog2.Frogc(2);
-	Frog3.Frogc(3);
-	
-	std::cout<<"Welcome to the frog race game, type 'y' to start the game  or 'n' to exit the game."<<std::endl<<std::endl;
-	
-	while(std::getline(std::cin,option)){/*!<Loop necessary to ensure that the program will only run if the user 
-	                                      *type "y" or will stop if he type "n".*/
-		if(option == "n"){
-			std::cout<<"quiting..."<<std::endl;
-			return 0;
-		}
-		if(option == "y"){
-			break;
-		}
-		std::cout<<"Invalid option, please type 'y' to start the game or 'n' to exit the game."<<std::endl;
+	std::string option,line;
+	int quantity = 3;
+	int function_return;/*!<variable necessary to stop the function main if the user type "n" to quit.*/
+
+	start(option,line,quantity,function_return);
+	if(function_return == -1){
+		return -1;
 	}
 
-	FrogRace(Frog1,Frog2,Frog3);/*!<Function where all the "race" occurs.*/
+    Frog *Frog1 = new Frog[quantity];
+    
+	FrogRace(Frog1,quantity);/*!<Function where all the "race" occurs.*/
+
+    delete[] Frog1;
 
 	return 0;
 }

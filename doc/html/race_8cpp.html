@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Frog Race: /home/xsolowingx/LP1/Programas/FrogRace/src/race.cpp File Reference</title>
+<title>Frog Race: /home/xsolowingx/LP1/Programas/FrogRace2/src/race.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,17 +75,17 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a852d511a75f3c96fe7ad841eb69efb3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="race_8cpp.html#a852d511a75f3c96fe7ad841eb69efb3a">FrogRace</a> (<a class="el" href="classFrog.html">Frog</a> &amp;Frog1, <a class="el" href="classFrog.html">Frog</a> &amp;Frog2, <a class="el" href="classFrog.html">Frog</a> &amp;Frog3)</td></tr>
-<tr class="separator:a852d511a75f3c96fe7ad841eb69efb3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7943f61663b0ca5e51f4e14576daf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="race_8cpp.html#aec7943f61663b0ca5e51f4e14576daf5">FrogRace</a> (<a class="el" href="classFrog.html">Frog</a> *Frog1, int const quantity)</td></tr>
+<tr class="separator:aec7943f61663b0ca5e51f4e14576daf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>file where occurs the "race". </p>
 <dl class="section since"><dt>Since</dt><dd>08/23/2017 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>08/24/2017 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>08/28/2017 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Matheus de Jesus </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a852d511a75f3c96fe7ad841eb69efb3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a852d511a75f3c96fe7ad841eb69efb3a">&#9670;&nbsp;</a></span>FrogRace()</h2>
+<a id="aec7943f61663b0ca5e51f4e14576daf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec7943f61663b0ca5e51f4e14576daf5">&#9670;&nbsp;</a></span>FrogRace()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -93,20 +93,14 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void FrogRace </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classFrog.html">Frog</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classFrog.html">Frog</a> *&#160;</td>
           <td class="paramname"><em>Frog1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classFrog.html">Frog</a> &amp;&#160;</td>
-          <td class="paramname"><em>Frog2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classFrog.html">Frog</a> &amp;&#160;</td>
-          <td class="paramname"><em>Frog3</em>&#160;</td>
+          <td class="paramtype">int const&#160;</td>
+          <td class="paramname"><em>quantity</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -115,10 +109,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>&lt;Verify if any of the 3 frogs has crossed the line.</p>
-<p>&lt;Verify if Frog1 has crossed the line.</p>
-<p>&lt;Verify if Frog2 has crossed the line.</p>
-<p>&lt;Verify if Frog3 has crossed the line. </p>
+<p>&lt;Set the id of Frog1[i] to <a class="el" href="classFrog.html" title="here we have the class Frog. ">Frog</a>"i+1" and set the quantity_jumps &amp; distanceT to 0.</p>
+<p>&lt;Make the "race" occurs.</p>
+<p>&lt;Make every frog jump.</p>
+<p>&lt;Show to the user how many cm the <a class="el" href="classFrog.html" title="here we have the class Frog. ">Frog</a>[i] went through with "n" jumps. </p>
 
 </div>
 </div>
